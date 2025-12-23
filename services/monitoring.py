@@ -53,7 +53,7 @@ class DISK:
         return round(psutil.disk_usage('/home').free / DISK.GB, 2)
 
 
-class SYST:
+class SYSTEM:
     @staticmethod
-    def avg_load():
-        return psutil.getloadavg()[0] * psutil.cpu_count() #  # pyright: ignore[reportOperatorIssue]
+    def avr_load():
+        return round(psutil.getloadavg()[0] * psutil.cpu_count(), 2) #  # pyright: ignore[reportOperatorIssue]
